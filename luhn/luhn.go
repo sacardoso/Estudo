@@ -17,7 +17,7 @@ func main() {
 
 }
 
-//DoubleNumber dobra o numero
+//DoubleNumber dobra o numero com indices 0, 2, 4, 6, 8 .......
 func DoubleNumber(number []int) []int {
 
 	for i, n := range number { // 'n' vai ser os numeros do number(n[i]); exemplo: n[0]=4; n[1]=5.....
