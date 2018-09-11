@@ -41,3 +41,19 @@ func TestVerifyIfNumberIsValid(t *testing.T) {
 	}
 
 }
+
+func TestNumber(t *testing.T) {
+
+	number := []int{8, 2, 7, 3, 1, 2, 3, 2, 7, 3, 5, 2, 0, 5, 6, 9}
+
+	newNumber := DoubleNumber(number)
+	sum := SumDigits(newNumber)
+
+	result := VerifyIfNumberIsValid(sum)
+
+	expected := "The number is not valid!"
+
+	if result != expected {
+		t.Errorf("Número inválido! Resultado: %s != Esperado: %s", result, expected)
+	}
+}
