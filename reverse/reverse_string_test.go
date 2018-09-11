@@ -14,3 +14,36 @@ func TestReverse(t *testing.T) {
 		t.Errorf("'%s' != '%s'", result, expected)
 	}
 }
+
+func TestReverseOdd(t *testing.T) {
+
+	result := reverse("words")
+
+	expected := "sdrow"
+
+	if result != expected {
+		t.Errorf("'%s' != '%s'", result, expected)
+	}
+}
+
+func TestReverseAcento(t *testing.T) {
+
+	result := reverse("até")
+
+	expected := "éta"
+
+	if result != expected {
+		t.Errorf("'%s' != '%s'", result, expected)
+	}
+}
+
+func TestReverseCharacter(t *testing.T) {
+
+	result := reverse("até+")
+
+	expected := "+éta"
+
+	if result != expected {
+		t.Errorf("'%s' != '%s'", result, expected)
+	}
+}
