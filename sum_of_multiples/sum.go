@@ -13,7 +13,7 @@ import (
 
 func main() {
 
-	SumOfMultiples(3, 5, 20)
+	SumOfMultiples(2, 3, 10)
 }
 
 func SumOfMultiples(number1, number2, limit int) int {
@@ -24,7 +24,7 @@ func SumOfMultiples(number1, number2, limit int) int {
 	for _, n := range listOfMults {
 		sum += n
 	}
-	fmt.Println("A soma dos multiplos de", number1, " e ", number2, "(até ", limit, ") é:", sum)
+	fmt.Println("A soma dos multiplos de", number1, "e", number2, "(até", limit, ") é:", sum)
 	return sum
 }
 
@@ -40,14 +40,11 @@ func Multiples(number1, number2, limit int) []int {
 	}
 
 	for i := 1; i <= (limit / number2); i++ {
-		fmt.Println("The multiples:", mults)
 		m2 := number2 * i
 		if m2 < limit {
 			for _, v := range mults {
 				if m2 == v {
 					m2 = 0
-					//mult2 := &m2
-					//*mult2 = 0
 				}
 			}
 			mults = append(mults, m2)
